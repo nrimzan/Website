@@ -1,4 +1,3 @@
-# Website
 What if I learn HTML and CSS at the same time I'm making a website?
 
 <h2>Journey of a fella that were late to the party.</h2>
