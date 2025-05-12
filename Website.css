@@ -1,12 +1,59 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Helvetica, sans-serif;
-  }
-  
-/* nav fonts colour - TBD cause its not exactly the same as footer font colour*/
-.nav-link
+body, html 
 {
-  color:#717171
+  height: 100%;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #1B1C1A;
+
 }
 
+header {
+  flex: 1; /* Makes header and main content fills the remaining space */
+}
+
+.navbar 
+{
+  background-color: #1B1C1A;
+}
+
+/* nav fonts colour - TBD cause its not exactly the same as footer font colour*/
+.nav-link, h1, h2
+{
+  color:#F05831;
+}
+
+.nav-link:hover {
+  color: white; /* Changes the text color to white on hover */
+}
+
+.profilepic:hover 
+{
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container
+{
+  width: 99%; 
+  height: 80%; 
+  background-color: #631A07;
+  color:#F0F1ED;
+}
+
+.text-start, .text-title
+{
+  text-align: left;
+  color: #F0F1ED;
+  font-size: xx-large;
+}
+
+footer, .footer 
+{
+  background-color: #1B1C1A; 
+  color: #631A07; 
+  text-align: center;
+  margin-top: auto;
+}
