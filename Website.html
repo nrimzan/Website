@@ -14,23 +14,25 @@ crossorigin="anonymous"></script>
 <body>      
   <header>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-body" style="background-color: rgba(0, 0, 0, 0.05)">
+  <nav class="navbar navbar-expand-sm">
     <div class="container-fluid">
-      <button
-        data-mdb-collapse-init
-        class="navbar-toggler"
-        type="button"
-        data-mdb-target="#navbarExample01"
-        aria-controls="navbarExample01"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
+      <button          
+      data-mdb-collapse-init
+      class="navbar-toggler"
+      type="button"
+      data-mdb-target="#navbar"
+      aria-controls="navbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
       >
         <i class="fas fa-bars"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbar">
+      <div class="collapse navbar-collapse">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <img src="profilepic.jpg" height="64px" width="64px" alt="profile pic" class="border border-3 rounded-circle profilepic">
+            <a href="Contact.html">
+              <img src="profilepic.jpg" height="64px" width="64px" alt="profile pic" class="border border-3 rounded-circle profilepic">
+            </a>
           </li>
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -38,13 +40,10 @@ crossorigin="anonymous"></script>
             <a class="nav-link" aria-current="page" href="Website.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Projects</a>
+            <a class="nav-link" href="Projects.html">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="About.html">About</a>
+            <a class="nav-link" href="Contact.html">Contact</a>
           </li>
         </ul>
       </div>
@@ -52,36 +51,68 @@ crossorigin="anonymous"></script>
   </nav>
   <!-- Navbar -->
 
-  <!-- Background image / MAKE THE PIC LOCAL-->
-  <div
-    class="p-5 text-center bg-image"
-    style="
-      background-image: url('https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/03/solo-leveling-sung-jin-woo-1.jpg');
-      height:1100px; width: 100%;"
-  >
-    <div class="mask pt-3 pb-3 p-sm-1" style="background-color: rgba(255, 255, 255, 0.05);">
-      <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="text-white">
-          <h1 class="mb-3">Top Text</h1>
-          <h4 class="mb-3">I am literally Sung Jin Woo</h4>
+  <!-- Home -->
+  <div class="pt-5 pb-5">
+    <div class="container-fluid pt-3 pb-3 p-sm-1 rounded-3" >
+      <div class="pt-3 pb-3">
+          <!-- 2 columns, left for pic, right for desc-->
+            <div class="row">
+              <div class="col-sm-5">
+                <div class="ps-5">
+                <img src="Home2.jpg"  alt="grad pic" class="d-block ms-0 rounded-3">
+                </div>
+              </div>
+              <div class="col-sm-7 text-start ps-3 pe-5">
+                <p>I am Nik Nazmir Nadim.</p>
+                <p>A fresh graduate with a background in Computer Science and Avionics.</p>
+              </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-   <!--Background image -->
   </header>
+<!-- Home -->
+
+<!-- Containers // Experience // REMOVE THIS AND ADD TO TEXT BESIDE HOME PIC-->
+  <div class="pb-5">
+    <div class="container pt-3 pb-3 p-sm-1 rounded-3" >
+      <div class="d-flex flex-column mb-3">
+        <div class="p-2 text-center text-title">Experience</div>
+          <p>Currently working as Data Analyst Protege at Malaysian Space Agency (MYSA).</p>
+      </div>
+    </div>
+  </div>  
+<!-- Containers // Experience -->
+
+<!-- Containers // Skills // ADD ICONS OF SKILLS (PYTHON, C, MATLAB, PHOTOSHOP)-->
+  <div class="pb-5">
+    <div class="container pt-3 pb-3 p-sm-1 rounded-3" >
+      <div class="d-flex flex-column mb-3">
+        <div class="p-2 text-center text-title">Skills</div>
+          <ul>
+            <li>
+              <p>Python</p>
+            </li>
+            <li>
+              <p>C, C++</p>
+            </li>
+          </ul>
+      </div>    
+    </div>
+  </div>  
+<!-- Containers // Skills -->
 
 <!-- Footer -->
-<footer class="text-center text-sm-start bg-body-tertiary text-muted">
+  <footer class="text-center text-sm-start">
   <!-- Copyright -->
-  <div class="text-center pt-3 pb-1" style="background-color: rgba(0, 0, 0, 0.05);">
+    <div class="text-center pt-3 pb-1 footer">
     Developed with bootstrap
-  </div>
-  <div class="text-center pt-1 pb-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    </div>
+    <div class="text-center pt-1 pb-3 footer">
     © 2025 Nik Nazmir Nadim
-  </div>
+    </div>
   <!-- Copyright -->
-</footer>
+  </footer>
 <!-- Footer -->
 
 </body>
