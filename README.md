@@ -10,5 +10,6 @@ Day 7 (I think)
 <br>
 Colours!
 
-Day uhh 9?
-Started learning JS cause the competition is tough out here
+Day uhh 9? 
+<br>
+Came to conclusion that there will be no javascript for the sake of my sanity
