@@ -5,27 +5,34 @@ body, html
   font-family: Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
-  background-color: #1B1C1A;
-
+  background-color: #131313;
 }
 
 header {
   flex: 1; /* Makes header and main content fills the remaining space */
 }
 
-.navbar 
+.navbar
 {
-  background-color: #1B1C1A;
+  background-color: #131313;
+  border-bottom: 1px solid #631A07;
+}
+
+.profilepic
+{
+  border: 2px solid #631A07;
+  border-radius: 50%; 
+  margin: auto;
 }
 
 /* nav fonts colour - TBD cause its not exactly the same as footer font colour*/
-.nav-link, h1, h2
+.nav-link, h1, h2, .aboutme
 {
-  color:#F05831;
+  color:#C4C6C2;
 }
 
 .nav-link:hover {
-  color: white; /* Changes the text color to white on hover */
+  color: #631A07; /* Changes the text color to white on hover */
 }
 
 .profilepic:hover 
@@ -35,25 +42,47 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.gradpic, .bigme
+{
+  border: #631A07 2px solid;
+}
+
+.myname
+{
+  color: #C4C6C2;
+  font-size: xx-large;
+}
+
 .container
 {
   width: 99%; 
   height: 80%; 
-  background-color: #631A07;
-  color:#F0F1ED;
+  background-color: #131313;
+  border: #631A07 1px solid;
+  color:#C4C6C2;
 }
+
 
 .text-start, .text-title
 {
   text-align: left;
-  color: #F0F1ED;
+  color: #C4C6C2;
   font-size: xx-large;
 }
 
-footer, .footer 
+.grid-container 
 {
-  background-color: #1B1C1A; 
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+footer
+{
+  background-color: #131313; 
   color: #631A07; 
   text-align: center;
   margin-top: auto;
+
 }
