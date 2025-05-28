@@ -1,10 +1,7 @@
-body, html 
-{
+body, html {
   height: 100%;
   margin: 0;
-  font-family: Helvetica, sans-serif;
-  display: flex;
-  flex-direction: column;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: #131313;
 }
 
@@ -12,10 +9,55 @@ header {
   flex: 1; /* Makes header and main content fills the remaining space */
 }
 
-.navbar
-{
+.navbar {
   background-color: #131313;
   border-bottom: 1px solid #631A07;
+  box-shadow: #000000 1px 1px 3px;
+}
+
+/* Socials aka LinkedIn icons */
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container-small {
+  display: flex;
+  align-items: auto;
+  justify-content: auto;
+  margin-left: 1.5rem;
+}
+
+.fa {
+  padding: 1px;
+  font-size: 1.5rem;  
+  text-decoration: none;
+}
+
+.fa:hover {
+  color: #631A07;
+}
+
+.fa-linkedin {
+  color: #C4C6C2;
+}
+
+/* Carousel */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: #631A07;
+  border-radius: 50%;
+  background-size: 70% 70%;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #631A07;
+  opacity: 0.5;
+}
+
+.carousel-indicators .active {
+  background-color: #E83D10;
+  opacity: 1;
 }
 
 .profilepic
@@ -25,57 +67,431 @@ header {
   margin: auto;
 }
 
-/* nav fonts colour - TBD cause its not exactly the same as footer font colour*/
-.nav-link, h1, h2, .aboutme
+/* Nav fonts colour */
+.nav-link, h1, h2, .aboutme, .dropdown-item
 {
   color:#C4C6C2;
 }
 
 .nav-link:hover {
-  color: #631A07; /* Changes the text color to white on hover */
+  color: #631A07;
 }
 
+/* Top left profile picture */
 .profilepic:hover 
 {
-  transform: scale(1.1);
+  transform: rotate(5deg) scale(1.1);
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.gradpic, .bigme
+/* Dropdown Navigation */
+.dropdown {
+  margin-right: auto;
+  margin-left: 30px;
+  margin-top: auto;
+  margin-bottom: 27px;
+}
+
+.btn {
+  margin-top: 10px;
+  background-color: #131313;
+  border: 1px solid #631A07;
+  box-shadow: #000000 1px 1px 4px;
+}
+
+.dropdown-toggle, .dropdown-menu {
+  background-color: #131313;
+  border: 1px solid #631A07;
+}
+
+.dropdown-toggle:active,
+.dropdown-toggle[aria-expanded="true"],
+.btn-secondary:active {
+  background-color: #131313;
+  color: #631A07;
+  border: 1px solid #631A07;
+  box-shadow: none !important;
+}
+
+.dropdown-toggle:hover,
+.btn-secondary:hover {
+  background-color: #131313;
+  color: #631A07;
+  border: 1px solid #631A07;
+  box-shadow: #000000 1px 1px 1px;
+}
+
+.dropdown-item:hover, input[type=submit]:hover {
+  background-color: #131313;
+  color: #631A07;
+}
+
+/* Home grad picture */
+.gradpic
 {
   border: #631A07 2px solid;
+  box-shadow: #000000 1px 1px 4px;
 }
 
-.myname
-{
+.gradpic:hover {
+  transform: rotate(5deg);
+}
+
+/* My Name Animation */
+.myname::before {
+  content: "what I am";
+  animation: animate infinite 8s;
+}
+
+@keyframes animate {
+  
+  0% {
+  content: "a Data Analyst.";
+  color: #A62B0C;
+  text-shadow: 1px 1px 4px #000000;
+  }
+
+  33% {
+  content: "a Data Analyst.";
+  color: #A62B0C;
+  text-shadow: 1px 1px 4px #000000;
+  }
+
+  34% {
+  content: "Nik Nazmir Nadim.";
+  color: #E83D10;
+  text-shadow: 1px 1px 4px #000000;
+  }
+
+  66% {
+  content: "Nik Nazmir Nadim.";
+  color: #E83D10;
+  text-shadow: 1px 1px 4px #000000;
+  }
+
+  67% {
+  content: "a Programmer.";
+  color: #C7340A;
+  text-shadow: 1px 1px 4px #000000;
+  }
+
+  100% {
+  content: "a Programmer.";
+  color: #C7340A;
+  text-shadow: 1px 1px 4px #000000;
+  }
+
+}
+
+.aboutme {
   color: #C4C6C2;
-  font-size: xx-large;
+  font-size: 2rem;
 }
 
+/* Main content */
 .container
 {
-  width: 99%; 
+  width: 100%; 
   height: 80%; 
   background-color: #131313;
   border: #631A07 1px solid;
   color:#C4C6C2;
+  height: auto;
+  box-shadow: #000000 1px 1px 4px;
 }
 
-
-.text-start, .text-title
+.text-title
 {
-  text-align: left;
+  text-align: center;
   color: #C4C6C2;
-  font-size: xx-large;
+  font-size: 3rem;
+  text-shadow: 3px 3px 3px #000000;
 }
 
-.grid-container 
+/* Experience */
+.exp-visuals {
+    width: 100%;
+    max-width: fit-content;
+    aspect-ratio: 1 / 1;
+    height: auto;     
+    border: #631A07 3px solid;
+    box-shadow: #101010  5px 5px 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: #000000 2px 2px 5px;
+  }
+
+.exp-visuals:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+/* Skills */
+/* Skills Icons */
+.grid
 {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  gap: 10px;
-  padding: 10px;
+  grid-template-columns: repeat(6, 1fr);
+  height: auto;
+  width: 100%;
+  gap: 1rem;
+  margin-left: 1.3rem;
+  margin-bottom: 5px;
+  justify-items: center;
+}
+
+.grid img {
+  width: 80%;
+  aspect-ratio: 1 / 1;
+  height: auto;     
+  border: #631A07 1px solid;
+  margin-bottom: 20 px;
+  box-shadow: #000000 1px 1px 4px;
+} 
+
+.skill-item {
+  position: relative;
+  display: inline-block;
+}
+
+.skill-item .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 50%; height: 100%;
+  opacity: 0;
+  transition: .2s ease;
+}
+
+.skill-item:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: #C4C6C2;
+  text-shadow: #631A07 3px 3px 0px;
+  font-size: 30px;
+  position: absolute;
+}
+
+/* Education Section */
+.design-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #131313;
+  min-height: 100vh;
+  padding: 100px 0;
+}
+
+.design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content {
+  padding: 20px;
+  background: #191919;
+  border: #631A07 1px solid;
+  color: #C4C6C2;
+  padding: 1.75rem;
+  transition: 0.4s ease;
+  overflow-wrap: break-word !important;
+  margin: 1rem;
+  margin-bottom: 20px;
+  box-shadow: #000000 1px 1px 4px;
+}
+
+.timeline-component {
+  margin: 0px 20px 20px 20px;
+}
+
+/* Projects */
+.projects {
+  align-items: center;
+  justify-content: center;
+}
+
+.projects img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 100%;
+  border: #631A07 2px solid;
+  box-shadow: #101010 5px 5px 5px;
+}
+
+.card-img-top {
+  border: #631A07 1px solid;
+  margin-top: 10px;
+}
+
+.card{
+  background-color: #131313;
+  border: #631A07 1px solid;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  box-shadow: #000000 1px 1px 4px;
+}
+
+.card-title {
+  color: #631A07;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+.card-text {
+  color: #C4C6C2;
+}
+
+/* Contact Forms */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #631A07;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #131313;
+  color: #C4C6C2;
+  border: #631A07 1px solid;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+/* Timeline */
+@media screen and (min-width: 768px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+  }
+  .timeline-middle {
+    position: relative;
+    background-image: linear-gradient(45deg, #631A07, #631A07, #631A07);
+    width: 1.5px;
+    height: 100%;
+  }
+  .main-middle {
+    opacity: 0;
+  }
+  .timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #631A07, #631A07, #631A07);
+    transform: translateX(-50%);
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+  .container {
+    width: 100%; 
+    height: auto; 
+    background-color: #131313;
+    border: #631A07 1px solid;
+    color:#C4C6C2;
+  }
+
+  .col-lg-4.mb-5.mb-lg-0 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .exp-visuals {
+    width: 50%;
+    max-width: fit-content;
+    aspect-ratio: 1 / 1;
+    height: auto;     
+    border: #631A07 1px solid;
+    margin: 10px 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Skills Icons */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    height: auto;
+    width: 80%;
+    gap: 0.5rem;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .grid > img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;     
+    border: #631A07 1px solid;
+    margin-bottom: 5px;
+    justify-self: center;
+    justify-items: center;
+  } 
+
+  .text {
+  color: #C4C6C2;
+  text-shadow: #000000 2px 2px 0px;
+  font-size: 21px;
+  position: absolute;
+}
+
+}
+
+/* Mobile: 2 columns */
+@media (max-width: 600px) {
+
+  .grid {
+    width: 50%;
+    grid-template-columns: repeat(2, 1fr);
+   }
+
+  .timeline::after {
+    left: 31px;
+   }
+
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: auto;
+    padding-right: auto;
+  }
+
+  .card-img-top {
+    max-height: fit-content;
+  }
+
+  .text {
+  color: #C4C6C2;
+  text-shadow: #000000 2px 2px 0px;
+  font-size: 15px;
+  position: absolute;
+}
 }
 
 footer
