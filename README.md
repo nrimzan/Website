@@ -13,3 +13,6 @@ Colours!
 Day uhh 9? 
 <br>
 Came to conclusion that there will be no javascript for the sake of my sanity
+
+Day 100 (true)
+FINALLY
